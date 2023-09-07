@@ -31,14 +31,13 @@ const offerSchema = new mongoose.Schema({
 
 const Offer = mongoose.model("Offer", offerSchema);
 
-const insertOffers = (offersData) => {
-  return Offer.insertMany(offersData)
-    .then(() => {
-      console.log("Successfully saved all the offers to the database");
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+const insertOffers = async (offersData) => {
+  try {
+    await Offer.insertMany(offersData);
+    console.log("Successfully saved all the offers to the database");
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 cron.schedule("0 */12 * * *",async () => {
