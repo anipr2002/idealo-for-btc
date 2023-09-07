@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"node offers.js\" \"node cachedValues.js\"",
+    "dev": "npm-run-all --parallel dev:offers dev:cachedValues",
+    "dev:offers": "nodemon Offers.js",
+    "dev:cachedValues": "nodemon cachedValues.js",
     "build": "npm i"
   },
   "keywords": [],
@@ -21,5 +23,8 @@
     "mongoose": "^7.5.0",
     "node-cron": "^3.0.2",
     "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }
