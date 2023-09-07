@@ -12,8 +12,8 @@ async function getOffersFromProviders(providers){
 
    return await Offer.findOne({ serviceProvider: providers })
   .sort({ createdAt: -1 })
+  .maxTimeMS(30000)
   .exec();
-
 }
 
 
