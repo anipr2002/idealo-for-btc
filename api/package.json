@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon offers.js && nodemon cachedValues.js",
+    "dev": "concurrently \"node Offers.js\" \"node cachedValues.js\"",
     "build": "npm i"
   },
   "keywords": [],
