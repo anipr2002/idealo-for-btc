@@ -1,4 +1,4 @@
-import React from "react";
+
 import Input, { InputProps } from "./Input";
 
 const AmountInput = (props: InputProps) => {

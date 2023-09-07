@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Input from "./components/Input";
 import AmountInput from "./components/AmountInput";
 import ResultRow from "./components/ResultRow";
 import axios from "axios";
