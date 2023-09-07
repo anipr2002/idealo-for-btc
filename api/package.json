@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently --kill-others \"npm run cachedValues.js\" \"npm run offers.js \"",
+    "dev": "nodemon offers.js && nodemon cachedValues.js",
     "build": "npm i"
   },
   "keywords": [],
